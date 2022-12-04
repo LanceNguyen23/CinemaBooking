@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-1 {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  float: left;
+}
+
+.col-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  float: left;
+}
+
+@keyframes appearOverlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  width: 1280px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+
+  .first-img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .quick-buy-ticket {
+    position: relative;
+    width: 100%;
+    background-color: #f7f8f9;
+    padding: 50px 18px 38px 18px;
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    .text-buy-ticket {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 6px 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: white;
+      background-color: #f26b38;
+    }
+
+    .select-ticket {
+      margin: 20px 0;
+
+      select {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        border: 1px solid #ced0da;
+        padding: 6px 10px;
+      }
+    }
+
+    .btn-buy-ticket {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background-color: #f26b38;
+      padding: 11px 15px;
+      float: right;
+    }
+
+    .btn-buy-ticket:hover {
+      cursor: pointer;
+      background-color: #e26435;
+    }
+  }
+
+  .content-text {
+    color: #43464b;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .content-text:hover {
+    cursor: pointer;
+    color: #f26b38;
+  }
+  .content-text:after {
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-top: 8px;
+    content: '';
+    background-color: #f26b38;
+  }
+
+  .list-review {
+    .review-item {
+      width: 100%;
+      display: flex;
+      margin: 30px 0;
+      .review-img-link {
+        margin-right: 20px;
+        display: block;
+        position: relative;
+        .review-img {
+          height: 190px;
+          width: 280px;
+        }
+        .has-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+      }
+      .review-info {
+        .review-rate {
+          margin: 10px 0 30px 0;
+          display: flex;
+          .review-like {
+            display: flex;
+            align-items: center;
+            background-color: #1877f2;
+            border-radius: 4px;
+            margin: 0 5px;
+            padding: 3px 10px;
+            color: white;
+            font-size: 12px;
+            span {
+              padding-left: 5px;
+              font-weight: 500;
+            }
+          }
+          .review-like:hover {
+            cursor: pointer;
+          }
+          .review-view {
+            display: flex;
+            align-items: center;
+            background-color: #e9edf1;
+            border-radius: 3px;
+            margin: 0 5px;
+            padding: 0px 10px;
+            color: #43464b;
+            span {
+              padding-left: 5px;
+              font-size: 12px;
+            }
+          }
+        }
+        .review-description {
+          color: #797b7f;
+          font-size: 14px;
+        }
+      }
+    }
+    .review-item:hover {
+      .review-name {
+        color: #f34343;
+      }
+      .has-overlay {
+        animation: appearOverlay 0.2s linear;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  .on-films {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3%;
+    .film-item {
+      margin-bottom: 20px;
+      .film-articles {
+        position: relative;
+        cursor: pointer;
+        .film-img {
+          width: 100%;
+        }
+        .overlay-buy-ticket {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          display: none;
+          .film-content {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            h4 {
+              border-radius: 2px;
+              color: white;
+              background-color: #f26b38;
+              width: 28px;
+              height: 22px;
+              line-height: 22px;
+              margin: 0 auto 30px auto;
+            }
+
+            a {
+              display: inline-block;
+              font-size: 14px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              color: white;
+              font-weight: 500;
+              border: 1px solid white;
+              padding: 15px 30px;
+              text-decoration: none;
+              line-height: 1;
+            }
+
+            a:hover {
+              background-color: #f26b38;
+              border: 1px solid #f26b38;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .film-articles:hover .overlay-buy-ticket {
+        display: block;
+        animation: appearOverlay linear 0.2s;
+      }
+      .film-name {
+        margin-top: 8px;
+
+        h4 {
+          margin: 0;
+          height: 20px;
+          font-size: 16px;
+          text-transform: uppercase;
+          line-height: 20px;
+        }
+        .vn-film-name {
+          color: #a0a3a7;
+        }
+      }
+    }
+  }
+
+  .about-cinema-text {
+    p {
+      color: #43464b;
+      font-size: 15px;
+      text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}

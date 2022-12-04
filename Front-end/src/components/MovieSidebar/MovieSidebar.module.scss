@@ -1,0 +1,187 @@
+@keyframes appearOverlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  .quick-buy-ticket {
+    position: relative;
+    width: 100%;
+    background-color: #f7f8f9;
+    padding: 50px 18px 38px 18px;
+    margin: 0;
+
+    .text-buy-ticket {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 6px 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: white;
+      background-color: #f26b38;
+    }
+
+    .select-ticket {
+      margin: 20px 0;
+
+      select {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        border: 1px solid #ced0da;
+        padding: 6px 10px;
+      }
+    }
+
+    .btn-buy-ticket {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      background-color: #f26b38;
+      padding: 11px 15px;
+      float: right;
+    }
+
+    .btn-buy-ticket:hover {
+      cursor: pointer;
+      background-color: #e26435;
+    }
+  }
+
+  .film-sidebar {
+    margin: 40px 0;
+    h3 {
+      color: #43464b;
+      line-height: 1.5;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    h3:after {
+      display: block;
+      width: 50px;
+      height: 2px;
+      margin-top: 8px;
+      content: '';
+      background-color: #f26b38;
+    }
+
+    .film-group {
+      margin-top: 20px;
+      .film-item {
+        margin-bottom: 20px;
+        .film-articles {
+          position: relative;
+          cursor: pointer;
+          .film-img {
+            width: 100%;
+          }
+          .overlay-buy-ticket {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            .film-content {
+              position: absolute;
+              width: 100%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              h4 {
+                border-radius: 2px;
+                color: white;
+                background-color: #f26b38;
+                width: 28px;
+                height: 22px;
+                line-height: 22px;
+                margin: 0 auto 30px auto;
+              }
+
+              a {
+                display: inline-block;
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: white;
+                font-weight: 500;
+                border: 1px solid white;
+                padding: 15px 30px;
+                text-decoration: none;
+                line-height: 1;
+              }
+
+              a:hover {
+                background-color: #f26b38;
+                border: 1px solid #f26b38;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .film-articles:hover .overlay-buy-ticket {
+          display: block;
+          animation: appearOverlay linear 0.2s;
+        }
+        .film-name {
+          margin-top: 8px;
+
+          h4 {
+            margin: 0;
+            height: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            line-height: 20px;
+          }
+          .vn-film-name {
+            color: #a0a3a7;
+          }
+        }
+      }
+    }
+    .see-more {
+      margin-top: 20px;
+      cursor: pointer;
+      float: right;
+
+      a {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #f26b38;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 15px 20px;
+        border: 1px solid #f26b38;
+      }
+      a:after {
+        font-family: 'FontAwesome';
+        font-weight: 400;
+        line-height: 1;
+        content: '\f178';
+        margin-left: 10px;
+      }
+    }
+    .see-more:hover a {
+      color: white;
+      background-color: #f26b38;
+    }
+  }
+}
